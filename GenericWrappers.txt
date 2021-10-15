@@ -64,7 +64,11 @@ public class GenericWrappers implements Wrappers {
 		}
           
 	}
-	public void enterByuserID(String idValue, String data) {
+
+
+
+
+	public void enterprofilePhoto(String idValue, String data) {
 		// TODO Auto-generated method stub
       try {
 		driver.findElementById(idValue).sendKeys(data);
@@ -88,12 +92,8 @@ public class GenericWrappers implements Wrappers {
 		takeSnap();
 	}
 	
-
-
-
-
-
-	public void enterById(String idValue, String data) {
+}
+public void enterById(String idValue, String data) {
 		// TODO Auto-generated method stub
       try {
 		driver.findElementById(idValue).sendKeys(data);
