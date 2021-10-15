@@ -64,6 +64,34 @@ public class GenericWrappers implements Wrappers {
 		}
           
 	}
+	public void enterByuserID(String idValue, String data) {
+		// TODO Auto-generated method stub
+      try {
+		driver.findElementById(idValue).sendKeys(data);
+		System.out.println("The Element with id "+idValue+" is successfully entered with the data "+data);
+	}catch (NoSuchElementException e) {
+		// TODO: handle exception
+		System.err.println("The Element with id "+idValue+" is not found in the DOM");
+	} catch (ElementNotVisibleException e) {
+		// TODO Auto-generated catch block
+		System.err.println("The Element with id "+idValue+" is not visibe in the Application ");
+	} catch (ElementNotInteractableException e) {
+		// TODO: handle exception
+		System.err.println("The Element with id "+idValue+" is not interactable with the Application");
+	} catch (StaleElementReferenceException e) {
+		// TODO: handle exception
+		System.err.println("The Element with id "+idValue+" is not stable in the Application");
+	} catch (WebDriverException e) {
+		// TODO: handle exception
+		System.err.println("The Element with id "+idValue+" is not enetered with data "+data+" due to unknown Error");
+	} finally {
+		takeSnap();
+	}
+	
+
+
+
+
 
 	public void enterById(String idValue, String data) {
 		// TODO Auto-generated method stub
